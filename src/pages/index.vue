@@ -1,9 +1,7 @@
 <script setup lang="ts">
+import {RouterView} from 'vue-router';
 </script>
 
 <template lang="pug">
-router-view
+RouterView
 </template>
-
-<style scoped>
-</style>

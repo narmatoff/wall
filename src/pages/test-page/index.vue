@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-div Lorem ipsum.
+div Test page.
 </template>
 
 <style scoped lang="scss">

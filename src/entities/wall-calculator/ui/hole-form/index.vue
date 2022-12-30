@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import {
   watch,
-  defineEmits
 } from 'vue';
-import type {TRect} from "../types";
+import type {TRect} from "../../types";
 import {useToast} from "primevue/usetoast";
 
 const toast = useToast();

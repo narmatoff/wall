@@ -3,9 +3,10 @@ import {
   computed,
   ref
 } from 'vue'
-import SummaryBlock from "./wall-components/SummaryBlock.vue";
-import EnterMainData from "./wall-components/WallDataForm.vue";
-import HoleForm from "./wall-components/HoleForm.vue";
+
+import SummaryBlock from "./ui/summary-block";
+import WallDataForm from "./ui/wall-data-form";
+import HoleForm from "./ui/hole-form";
 
 import type {TRect} from "./types";
 import {PGP} from "./constants";
@@ -73,7 +74,7 @@ const createOpening = () => holes.value.push({width: 0, height: 0});
 
 <template lang="pug">
 summary-block(:count="countPGP" :weight="weightPGP" :name="props.msg") // блок результатов расчета
-enter-main-data(:model-value="wall") // блок ввода размеров стены
+wall-data-form(:model-value="wall") // блок ввода размеров стены
 hole-form(
   v-for="(hole, idx) in holes"
   :key="hole"

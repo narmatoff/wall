@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {TRect} from "../types";
+import type {TRect} from "../../types";
 export interface IProps {
   modelValue: TRect,
 }

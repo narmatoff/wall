@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WidgetWallCalculator from '../widgets/wallCalculator.vue'
+import WidgetWallCalculator from '../../widgets/wall-calculator'
 </script>
 
 <template lang="pug">

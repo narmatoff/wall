@@ -1,8 +1,11 @@
-import { createApp } from 'vue'
-import './style.scss'
-import App from './App.vue'
-import router from './router';
+import {
+    router,
+    // store
+} from './providers';
+import {createApp} from 'vue'
 
+import App from './index.vue';
+import './index.scss'
 import PrimeVue from 'primevue/config';
 import Button from 'primevue/button';
 import Fieldset from 'primevue/fieldset';
@@ -23,7 +26,8 @@ import 'primevue/resources/themes/lara-light-blue/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
 
-createApp(App)
+export const app = createApp(App);
+app
     .use(PrimeVue, {ripple: true})
     .use(ToastService)
     .use(router)
