@@ -11,4 +11,4 @@ export const routes = [
     }
 ];
 
-export default {Routing}
+export default Routing

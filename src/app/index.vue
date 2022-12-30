@@ -2,10 +2,9 @@
   import Routing from '../pages';
 </script>
 
-<template>
-  <div class="app">
-    <Routing />
-  </div>
+<template lang="pug">
+.app
+  Routing
 </template>
 
 <style>
