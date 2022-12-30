@@ -74,10 +74,8 @@ const createOpening = () => holes.value.push({width: 0, height: 0});
 </script>
 
 <template lang="pug">
-summary-block(:count="countPGP" :weight="weightPGP" :name="props.msg")
-
-enter-main-data(:model-value="wall")
-
+summary-block(:count="countPGP" :weight="weightPGP" :name="props.msg") // блок результатов расчета
+enter-main-data(:model-value="wall") // блок ввода размеров стены
 hole-form(
   v-for="(hole, idx) in holes"
   :key="hole"
@@ -86,8 +84,7 @@ hole-form(
   :invalid-width="wall.width*100 <= holesWidth"
   :model-value="holes[idx]"
   @remove="removeOpening(idx)"
-  )
-
+  ) // блок ввода размеров проемов
 .mt-4
   Button(@click="createOpening" label="Добавить проем" icon="pi pi-plus" iconPos="right")
 </template>

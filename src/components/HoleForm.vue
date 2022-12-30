@@ -34,7 +34,7 @@ watch(() => props.invalidWidth, () => {
 <template lang="pug">
 Toast
 h3 Укажите размер проема {{ props.idx + 1 }}
-chip.mb-2.pt-2.pb-2(icon='pi pi-microsoft' :removable='true' @remove="emit('remove', $event)")
+Chip.mb-2.pt-2.pb-2(icon='pi pi-microsoft' :removable='true' @remove="emit('remove', $event)")
   .p-inputgroup
 
     .col-12(class='md:col-6')
