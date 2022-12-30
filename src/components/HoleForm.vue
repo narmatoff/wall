@@ -32,22 +32,22 @@ watch(() => props.invalidWidth, () => {
 </script>
 
 <template lang="pug">
-  toast
-  h3 Укажите размер проема {{ props.idx + 1 }}
-  chip.mb-2.pt-2.pb-2(icon='pi pi-microsoft' :removable='true' @remove="emit('remove', $event)")
-    .p-inputgroup
+toast
+h3 Укажите размер проема {{ props.idx + 1 }}
+chip.mb-2.pt-2.pb-2(icon='pi pi-microsoft' :removable='true' @remove="emit('remove', $event)")
+  .p-inputgroup
 
-      .col-12(class='md:col-6')
-        .p-inputgroup
-          span.p-inputgroup-addon Ширина проема:
-          InputNumber(v-model='props.modelValue.width' placeholder='Ширина проема' :class="props.invalidWidth ? 'p-invalid' : ''" buttonlayout='vertical')
-          span.p-inputgroup-addon cм.
+    .col-12(class='md:col-6')
+      .p-inputgroup
+        span.p-inputgroup-addon Ширина проема:
+        InputNumber(v-model='props.modelValue.width' placeholder='Ширина проема' :class="props.invalidWidth ? 'p-invalid' : ''" buttonlayout='vertical')
+        span.p-inputgroup-addon cм.
 
-      .col-12(class='md:col-6')
-        .p-inputgroup
-          span.p-inputgroup-addon Высота проема:
-          InputNumber(v-model='props.modelValue.height' placeholder='Высота проема' :max='props.wall.height*100')
-          span.p-inputgroup-addon cм.
+    .col-12(class='md:col-6')
+      .p-inputgroup
+        span.p-inputgroup-addon Высота проема:
+        InputNumber(v-model='props.modelValue.height' placeholder='Высота проема' :max='props.wall.height*100')
+        span.p-inputgroup-addon cм.
 </template>
 
 <style lang="scss" scoped>
