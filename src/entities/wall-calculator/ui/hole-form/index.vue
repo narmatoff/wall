@@ -9,7 +9,7 @@ const toast = useToast();
 
 const emit = defineEmits(['remove'])
 
-export interface IProps {
+interface IProps {
   modelValue: TRect,
   idx: number,
   wall: TRect,
