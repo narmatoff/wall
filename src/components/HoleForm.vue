@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {
   watch,
+  defineEmits
 } from 'vue';
-import {TRect} from "../types";
+import type {TRect} from "../types";
 import {useToast} from "primevue/usetoast";
 
 const toast = useToast();
@@ -31,7 +32,7 @@ watch(() => props.invalidWidth, () => {
 </script>
 
 <template lang="pug">
-toast
+  toast
   h3 Укажите размер проема {{ props.idx + 1 }}
   chip.mb-2.pt-2.pb-2(icon='pi pi-microsoft' :removable='true' @remove="emit('remove', $event)")
     .p-inputgroup
@@ -39,14 +40,14 @@ toast
       .col-12(class='md:col-6')
         .p-inputgroup
           span.p-inputgroup-addon Ширина проема:
-          inputnumber(v-model='props.modelValue.width' type='number' placeholder='Ширина проема' :class="props.invalidWidth ? 'p-invalid' : ''" buttonlayout='vertical')
-            span.p-inputgroup-addon cм.
+          InputNumber(v-model='props.modelValue.width' placeholder='Ширина проема' :class="props.invalidWidth ? 'p-invalid' : ''" buttonlayout='vertical')
+          span.p-inputgroup-addon cм.
 
       .col-12(class='md:col-6')
         .p-inputgroup
           span.p-inputgroup-addon Высота проема:
-          inputnumber(type='number' v-model='props.modelValue.height' placeholder='Высота проема' :max='props.wall.height*100')
-            span.p-inputgroup-addon cм.
+          InputNumber(v-model='props.modelValue.height' placeholder='Высота проема' :max='props.wall.height*100')
+          span.p-inputgroup-addon cм.
 </template>
 
 <style lang="scss" scoped>

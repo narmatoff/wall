@@ -7,7 +7,7 @@ import SummaryBlock from "./SummaryBlock.vue";
 import EnterMainData from "./WallDataForm.vue";
 import HoleForm from "./HoleForm.vue";
 
-import {TRect} from "../types";
+import type {TRect} from "../types";
 import {PGP} from "../constants";
 
 const props = defineProps<{ msg: string }>()
@@ -85,7 +85,8 @@ hole-form(
   :wall="wall"
   :invalid-width="wall.width*100 <= holesWidth"
   :model-value="holes[idx]"
-  @remove="removeOpening(idx)")
+  @remove="removeOpening(idx)"
+  )
 
 .mt-4
   Button(@click="createOpening" label="Добавить проем" icon="pi pi-plus" iconPos="right")
