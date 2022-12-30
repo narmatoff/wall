@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './style.scss'
 import App from './App.vue'
+import router from './router';
 
 import PrimeVue from 'primevue/config';
 import Button from 'primevue/button';
@@ -25,6 +26,7 @@ import 'primeicons/primeicons.css';
 createApp(App)
     .use(PrimeVue, {ripple: true})
     .use(ToastService)
+    .use(router)
     .component('Button', Button)
     .component('Fieldset', Fieldset)
     .component('Chip', Chip)

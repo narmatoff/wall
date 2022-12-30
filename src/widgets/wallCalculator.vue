@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WallCalculate from './components/WallCalculate.vue'
+import WallCalculate from '../entities/wall-calculator/calculatorEntity.vue'
 </script>
 
 <template lang="pug">

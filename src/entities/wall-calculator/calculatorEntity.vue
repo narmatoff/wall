@@ -3,12 +3,12 @@ import {
   computed,
   ref
 } from 'vue'
-import SummaryBlock from "./SummaryBlock.vue";
-import EnterMainData from "./WallDataForm.vue";
-import HoleForm from "./HoleForm.vue";
+import SummaryBlock from "./wall-components/SummaryBlock.vue";
+import EnterMainData from "./wall-components/WallDataForm.vue";
+import HoleForm from "./wall-components/HoleForm.vue";
 
-import type {TRect} from "../types";
-import {PGP} from "../constants";
+import type {TRect} from "./types";
+import {PGP} from "./constants";
 
 const props = defineProps<{ msg: string }>()
 
@@ -61,8 +61,6 @@ const weightPGP = computed<number>(() => countPGP.value * PGP.WEIGHT);
  * @param idx
  */
 const removeOpening = (idx: number) => {
-  console.log('holes', holes.value)
-  console.log('idx', idx)
   holes.value.splice(idx, 1);
 }
 

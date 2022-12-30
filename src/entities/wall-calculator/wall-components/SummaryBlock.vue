@@ -14,6 +14,6 @@ Card.shadow-2
   template(#content)
     p Количество требуемых ПГП c учетом проемов:
       strong {{ props.count }} шт.
-    p Вес требуемых ПГП
+    p Вес требуемых ПГП:
       strong {{ props.weight }} кг.
 </template>
